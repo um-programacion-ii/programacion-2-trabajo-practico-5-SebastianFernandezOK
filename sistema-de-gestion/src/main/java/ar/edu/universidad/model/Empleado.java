@@ -37,10 +37,6 @@ public class Empleado {
     private Departamento departamento;
 
     @ManyToMany
-    @JoinTable(
-        name = "empleado_proyecto",
-        joinColumns = @JoinColumn(name = "empleado_id"),
-        inverseJoinColumns = @JoinColumn(name = "proyecto_id")
-    )
+    @JoinTable(name = "empleado_proyecto", joinColumns = @JoinColumn(name = "empleado_id"), inverseJoinColumns = @JoinColumn(name = "proyecto_id"))
     private Set<Proyecto> proyectos = new HashSet<>();
 }
