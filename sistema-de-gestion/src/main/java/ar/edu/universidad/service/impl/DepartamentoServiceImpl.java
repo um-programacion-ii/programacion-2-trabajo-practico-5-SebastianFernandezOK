@@ -31,7 +31,8 @@ public class DepartamentoServiceImpl implements DepartamentoService {
     @Override
     public Departamento buscarPorNombre(String nombre) {
         Departamento dep = departamentoRepository.findByNombre(nombre);
-        if (dep == null) throw new RuntimeException("Departamento no encontrado: " + nombre);
+        if (dep == null)
+            throw new RuntimeException("Departamento no encontrado: " + nombre);
         return dep;
     }
 
